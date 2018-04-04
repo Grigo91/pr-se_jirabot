@@ -1,13 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
+
+		<title>Fahrenheit - JIRA-BOT</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
-
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,35 +28,150 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style>
+			.reveal .slide-background{ background-color: rgba(229, 101, 41, .75) }
+			a {color:#000 !important;}
+		</style>
 	</head>
+
 	<body>
+
 		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Agentur Fahrenheit</h2>
+					<h3>Team Backend proudly presents</h3>
+				</section>
+
+				<section>
+					<h1>JIRA-BOT</h1>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Die Grundlage</h2>
+						<ul>
+							<li class="fragment">zeitlich wiederkehrende Aufgaben</li>
+							<li class="fragment">über längeren Zeitraum</li>
+						</ul>
+
+						<aside class="notes">
+							Worum geht es eigentlich?
+						</aside>
+					</section>
+				</section>
+
+				<section>
+
+
+					<section>
+						<h2>Das Problem</h2>
+						<p>Aufgaben</p>
+						<ul>
+							<li class="fragment">geraten in Vergessenheit</li>
+							<li class="fragment">tauchen im Filter nicht mehr auf, wenn Sie einmal erledigt wurden</li>
+						</ul>
+
+						<aside class="notes">
+							Warum haben wir den Bot gebaut?
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Die Lösung?</h2>
+					<h1 class="fragment">JIRA BOT</h1>
+
+					<aside class="notes">
+						Warum haben wir den Bot gebaut?
+					</aside>
+				</section>
+
+				<section>
+					<a href="https://fahrenheitagency.atlassian.net/browse/TEST-1" target="_blank">Link zu Jira</a>
+				</section>
+
+				<section>
+					<section>
+						<h2>Technische Grundlagen</h2>
+					</section>
+
+					<section>
+						<h2>Anbindung:</h2>
+						<img src="https://i.ytimg.com/vi/nScy6S9tcmI/maxresdefault.jpg"/>
+					</section>
+
+					<section>
+						<h2>Programmierung:</h2>
+						<img style="border:none!important;" width="400px" src="https://camo.githubusercontent.com/98ed65187a84ecf897273d9fa18118ce45845057/68747470733a2f2f7261772e6769746875622e636f6d2f676f6c616e672d73616d706c65732f676f706865722d766563746f722f6d61737465722f676f706865722e706e67">
+					</section>
+
+					<section>
+						<img style="border:none!important;" width="400px" src="https://forum.golangbridge.org/uploads/default/original/2X/0/03cbc1a9f9178055093eb0c25ba9df2c29611671.png">
+					</section>
+				</section>
+
+				<section data-background="https://media.giphy.com/media/gGuOldphm6vzW/giphy.gif">
+					<aside class="notes">
+						Hackerman!
+					</aside>
+				</section>
+
+				<section>
+					<h2>Links:</h2>
+					<ul>
+						<li class="fragment">
+							<a href="https://developer.atlassian.com/cloud/jira/platform/rest/">Doku: Jira Rest Api</a>
+						</li>
+
+						<li class="fragment">
+							<a href="https://golang.org/doc/">Doku: Go</a>
+						</li>
+					</ul>
+				</section>
+
 			</div>
+
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+
+			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls				: true,
+				progress				: true,
+				history					: true,
+				center					: true,
+                defaultTiming			: 60,
+                parallaxBackgroundImage	: 'http://agentur-fahrenheit.de/thumbs/start/agentur-fahrenheit-koeln-1920x1080-41-59-q60.jpg',
+                parallaxBackgroundSize	: '',
+				theme					: 'sky',
 
-                controls: false, // Navigationspfeile zeigen
-                progress: true, // Fortschrittsbalken
-                center: true, // Inhalt zentrieren
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
+				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
 		</script>
+
 	</body>
 </html>
